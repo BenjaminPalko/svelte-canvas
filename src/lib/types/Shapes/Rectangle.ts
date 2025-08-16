@@ -1,10 +1,10 @@
-import type { Vector2 } from "../Vector2";
-import { Shape } from "./Shape";
+import type { Vector2 } from '../Vector2';
+import { Shape } from './Shape';
 
 export class Rectangle extends Shape {
 	constructor(
 		position: Vector2,
-		public readonly dimensions: Vector2,
+		public readonly dimensions: Vector2
 	) {
 		super(position);
 	}
@@ -15,13 +15,8 @@ export class Rectangle extends Shape {
 
 	Render(context: CanvasRenderingContext2D) {
 		context.beginPath();
-		context.fillStyle = "#fff";
-		context.fillRect(
-			this.position.x,
-			this.position.y,
-			this.dimensions.x,
-			this.dimensions.y,
-		);
+		context.fillStyle = '#fff';
+		context.fillRect(this.position.x, this.position.y, this.dimensions.x, this.dimensions.y);
 	}
 
 	WithinBounds(point: Vector2): boolean {

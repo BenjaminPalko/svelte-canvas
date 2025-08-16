@@ -32,10 +32,7 @@ export class Vector2 {
 	}
 
 	Lerp(other: Vector2, t: number) {
-		return new Vector2(
-			this.lerp(this.x, other.x, t),
-			this.lerp(this.y, other.y, t),
-		);
+		return new Vector2(this.lerp(this.x, other.x, t), this.lerp(this.y, other.y, t));
 	}
 
 	private lerp(v0: number, v1: number, t: number) {
