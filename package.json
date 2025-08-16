@@ -4,6 +4,7 @@
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
+		"deploy": "bun run build && bunx gh-pages -d build -t",
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
